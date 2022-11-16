@@ -1,18 +1,18 @@
 {
-  "name": "JATE",
+  "name": "jate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Text editor that runs in the browser.",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "client": "cd client && npm start"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Torres",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
@@ -20,6 +20,16 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
-  }
+    "nodemon": "^2.0.4",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtc8/Text-Editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidtc8/Text-Editor/issues"
+  },
+  "homepage": "https://github.com/davidtc8/Text-Editor#readme"
 }
