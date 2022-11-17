@@ -11,6 +11,9 @@ Text Editor that runs in the browser
 - [Go to test instructions section](#-test-instructions)
 - [Go to questions section](#-questions)
 
+# Application Image:
+![Demo](client/src/images/Demo.png)
+
 # Installation
 You can either click on the Heroku link or clone in the repository, run "npm install" and "npm run" in the terminal
 
